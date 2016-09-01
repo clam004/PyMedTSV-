@@ -1,0 +1,20 @@
+
+#use this script  to delete txt files
+
+import os
+import glob
+import csv
+import copy
+from functions import *
+
+folderpath = '/Users/carsonlam/macroeyes/Population_v2/'
+dirs = get_immediate_subdirectories(folderpath)
+len(dirs)
+
+
+for MRN in dirs:
+    
+    deletefolder = folderpath + str(MRN) + '/' + 'IOP.txt'
+    
+    if os.path.exists(deletefolder):
+        os.remove(deletefolder)
